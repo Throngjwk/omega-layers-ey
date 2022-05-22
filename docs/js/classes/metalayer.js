@@ -39,6 +39,10 @@ class MetaLayer
                 level => Utils.createValueDilation(level.mul(12288).mul(Decimal.pow(1.1, Decimal.max(0, level.sub(15)))), 0.001).floor().add(143000),
                 level => new Decimal(1),
                 level => Decimal.pow(64, level.pow(game.restackLayer.upgradeTreeNames.resourceMultipliersLevelScaling.apply())).pow(this.getResourceMultiplierBoost()))
+            new MetaDynamicLayerUpgrade("1MJ2048",
+                level => Utils.createValueDilation(level.mul(1e9).mul(Decimal.pow(1.1, Decimal.max(0, level.sub(15)))), 0.001).floor().add(143000),
+                level => new Decimal(1),
+                level => Decimal.pow(2048, level.pow(game.restackLayer.upgradeTreeNames.resourceMultipliersLevelScaling.apply())).pow(this.getResourceMultiplierBoost()))
         ];
 
         this.powerUpgrades = [
@@ -86,6 +90,18 @@ class MetaLayer
                 }),
             new MetaDynamicLayerUpgrade("2Rv104",
                 level => Utils.createValueDilation(level.mul(2e300).mul(Decimal.pow(100000, Decimal.max(0, level.sub(1)))), 0.001).floor().add(1e300),
+                level => new Decimal(1),
+                level => Decimal.pow(1.1, level).pow(this.getResourcePowererBoost()).mul(game.restackLayer.upgradeTreeNames.resourcePowerersStrength.apply()), {
+                    getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
+                })
+            new MetaDynamicLayerUpgrade("2Rv105",
+                level => Utils.createValueDilation(level.mul(1e800).mul(Decimal.pow(1e20, Decimal.max(0, level.sub(1)))), 0.001).floor().add(1e600),
+                level => new Decimal(1),
+                level => Decimal.pow(1.1, level).pow(this.getResourcePowererBoost()).mul(game.restackLayer.upgradeTreeNames.resourcePowerersStrength.apply()), {
+                    getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
+                })
+            new MetaDynamicLayerUpgrade("2Rv106",
+                level => Utils.createValueDilation(level.mul(1e35000).mul(Decimal.pow(1e999, Decimal.max(0, level.sub(1)))), 0.001).floor().add(1e99999),
                 level => new Decimal(1),
                 level => Decimal.pow(1.1, level).pow(this.getResourcePowererBoost()).mul(game.restackLayer.upgradeTreeNames.resourcePowerersStrength.apply()), {
                     getEffectDisplay: effectDisplayTemplates.numberStandard(2, "^")
