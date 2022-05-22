@@ -138,6 +138,8 @@ var game = {
         new Achievement("It truly never Ends", "Reach Layer 1e100", "<span style='font-size: 30%;'><span>2Ω<sub>ϝ</sub></span><sup>ρ</sup>↑<span>Ω<sub>ϙ</sub></span><sup>Ν</sup>↑<span>Ω<sub>ϛ</sub></span><sup>κ</sup>↑<span>Ω</span><sup>Σ</sup></span>", () => game.metaLayer.layer.gte(1e100)),
         new Achievement("Inf-Infinity", "Reach Layer ~1.8e308", "<span class='flipped-v'>Ω</span>", () => game.metaLayer.layer.gte(INFINITY)),
         new Achievement("Was that supposed to be happen?", "Reach Layer ~e35K", "<span style='font-size: 50%;'>(↑↑↑114)", () => game.metaLayer.layer.gte("1e35000"))
+        new Achievement("what die", "Reach Layer ~e1000K", "<span style='font-size: 50%;'>(↑↑↑Hack)", () => game.metaLayer.layer.gte("1e1000000"))
+        new Achievement("It major turly ends", "Reach Layer ~ee12", "<span style='font-size: 50%;'>(↑↑↑999999999)", () => game.metaLayer.layer.gte("1e1000000000000"))
     ],
     currentLayer: null,
     currentChallenge: null,
